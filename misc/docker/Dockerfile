@@ -12,4 +12,5 @@ RUN apt-get install -yqq mercurial git gcc
 
 RUN /go/util/build.sh
 
-CMD ["/go/util/start-circuit.sh"]
+#CMD ["/go/util/start-circuit.sh"]
+CMD [" echo 'COMPLETE' "]

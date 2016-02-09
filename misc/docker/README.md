@@ -6,9 +6,11 @@
 
 ## Running containers
 
-**Note**: Use the `-l` option so that `bash` is in "login shell mode". This will make bash execute `/ect/profile`, where environment variables are exported for convenience.
+**Note**: Use the `-l` option so that `bash` is in "login shell mode". This
+will make bash execute `/ect/profile`, where environment variables are
+exported for convenience.
 
-	sudo docker run -i -t circuit-img /bin/bash -l
+  sudo docker run -i -t circuit-img /bin/bash -l
 
 If you don't add an entry command to `docker run` the container will start the circuit automatically. (you won't be able to interact with the container through a `tty`) By default, the script for automatic start of the circuit is using the address `228.8.8.8:8788` for UDP multicast channel. If you want to change this address, you can mount a file containing the chosen address to `/go/util/addr`, like this:
 

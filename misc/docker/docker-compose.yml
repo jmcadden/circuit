@@ -1,0 +1,28 @@
+cir_1:
+  build: .
+  volumes:
+    - /User/jmcadden/work/circuit
+  expose:
+    - "2323"
+    - "8788"
+  links:
+    - cir_2
+    - cir_3
+#env_file:
+# - ./common.env
+
+cir_2:
+  build: .
+  volumes:
+    - /User/jmcadden/work/circuit
+  expose:
+    - "2323"
+    - "8788"
+
+cir_3:
+  build: .
+  volumes:
+    - /User/jmcadden/work/circuit
+  expose:
+    - "2323"
+    - "8788"
